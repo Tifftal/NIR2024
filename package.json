@@ -12,10 +12,15 @@
   "dependencies": {
     "@mantine/core": "^7.9.1",
     "@mantine/hooks": "^7.9.1",
+    "@tabler/icons-react": "^3.3.0",
+    "konva": "^9.3.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-konva": "^18.2.10",
     "react-router-dom": "^6.23.1",
-    "sass": "^1.77.1"
+    "sass": "^1.77.1",
+    "tabler": "^1.0.0-alpha.8",
+    "use-image": "^1.1.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
