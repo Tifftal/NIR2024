@@ -19,7 +19,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-konva": "^18.2.10",
-    "react-router-dom": "^6.23.1",
     "sass": "^1.77.1",
     "tabler": "^1.0.0-alpha.8",
     "use-image": "^1.1.1"
