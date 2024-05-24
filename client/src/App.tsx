@@ -38,7 +38,7 @@ const App = () => {
   const [image] = useImage(!!imageURL ? imageURL : '');
   const [imageDimensions, setImageDimensions] = useState({ width: 0, height: 0 });
   const [photoScale, setPhotoScale] = useState('20');
-  const [units, setUnits] = useState('нм');
+  const [units, setUnits] = useState('nm');
   const [savedMeasurements, setMeasurements] = useState<Measurement[]>([]);
 
   const scale = Math.min(window.innerWidth / 2 / imageDimensions.width, window.innerHeight / imageDimensions.height);
@@ -94,7 +94,7 @@ const App = () => {
       const measurement = {
         start: `${(Number(photoScale) * points[0].x / (imageDimensions.width * scale)).toFixed(1)}, ${(Number(photoScale) * points[0].y / (imageDimensions.width * scale)).toFixed(1)}`,
         end: `${(Number(photoScale) * points[1].x / (imageDimensions.width * scale)).toFixed(1)}, ${(Number(photoScale) * points[1].y / (imageDimensions.width * scale)).toFixed(1)}`,
-        distance: `${(Number(photoScale) * distance / (imageDimensions.width * scale)).toFixed(2)} ${units}`,
+        distance: `${(Number(photoScale) * distance / (imageDimensions.width * scale)).toFixed(2)}`,
         note: '',
       };
       setMeasurements((state) => [...state, measurement]);
@@ -111,7 +111,7 @@ const App = () => {
 
   const generateCSV = (data: any) => {
     const csvRows = [];
-    const headers = ['Начальная точка (x, y)', 'Конечная точка (x, y)', `Расстояние в ${units}`, 'Примечание'];
+    const headers = ['Start (x, y)', 'End (x, y)', `Distance in ${units}`, 'Note'];
     csvRows.push(headers.join(','));
 
     data.forEach((element: any) => {
